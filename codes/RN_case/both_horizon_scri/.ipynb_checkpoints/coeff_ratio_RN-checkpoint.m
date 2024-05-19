@@ -1,0 +1,22 @@
+coeff1 = (slope1+2).*(tarr(init1+1:end));
+time_array = log10(tarr(init1+1:end));
+
+Fit = polyfit(time_array,coeff1,1)
+
+%{
+slope2 = (tarr_tail(2:end)).*(psi_extr_tail(2:end) - psi_extr_tail(1:end-1))...
+    ./(tarr_tail(2:end) - tarr_tail(1:end-1)).*1./(psi_extr_tail(2:end));
+
+% logt1 = logt1(2:end);
+% invt1 = 1./logt1;
+
+%%% This is the ratio of the coefficients C2/C1.
+coeff1 = (slope1+2).*(tarr(init1+1:end)-s);
+coeff2 = -(slope1+2).*(tarr(init1+1:end)).*(log(tarr(init1+1:end))).^-1;
+coeff3 = (-1/(4*M))*(coeff2+4*M);
+
+%%% Now we plot.
+%hold on
+%plot((tarr(init1+1:end))/M,coeff3,"Color",'r','LineStyle','-','LineWidth',1)
+plot(log(tarr(init1+1:end)-s),coeff1,"Color",'m','LineStyle','-')
+%}

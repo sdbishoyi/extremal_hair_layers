@@ -1,0 +1,14 @@
+loading libiconv version 1.16
+loading xz version 5.2.5
+loading zlib version 1.2.11
+loading libxml2 version 2.9.12
+loading cuda version 11.6.2
+loading libpciaccess version 0.16
+loading ncurses version 6.2
+loading hwloc version 2.7.1
+loading numactl version 2.0.14
+loading openssh version 8.2p1
+loading pmix version 3.1.5-1
+loading slurm version 20.02.7
+loading openmpi version 4.1.3
+slurmstepd-ials-gpu030: error: *** JOB 13627550 ON ials-gpu030 CANCELLED AT 2023-11-12T11:01:37 ***
