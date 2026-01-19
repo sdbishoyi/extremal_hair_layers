@@ -127,11 +127,17 @@ kernel_init (gdd_real *qre, gdd_real *qim, gdd_real *pre, gdd_real *pim, gdd_rea
          df = 2.0*mass/(rpt*rpt) - 2.0*charge*charge*(1.0/rpt - 1.0/S)/(rpt*rpt);
 
 	 bir = x*( 4.0*mass/S*(1.0-x) - x*x + 1.0 + 2.0*x )*( 2.0 + ff*(-2.0*x*(1.0-2.0*mass/S) - (4.0*mass/S+1.0) + x*x) );
+     
          Ataurho = 2.0*x*Power(1.0-x,2)*( 1.0 + ff*( -2.0*x*(1.0-2.0*mass/S)-(4.0*mass/S+1.0) + x*x ) ) / bir;
+         
          Arhorho = x*Power(1.0-x,4)*ff / bir;
+         
          Ayy = make_dd(0.0);
+         
          BtauReal = 0.0-x*Power(1.0-x,2)*( df*(4.0*mass/S*(1.0-x) - x*x + 1.0 + 2.0*x) - 2.0*ff*(2.0*mass/S + x - 1.0)/S ) / bir;
+         
          BrhoReal = 0.0-Power(1.0-x,3)*( x*(x-1.0)*df + 2.0*x*ff/S ) / bir;
+         
          By = make_dd(0.0);
          CReal = 0.0-Power(1.0-x,2)*( x*(1.0-x)*df + ss*(ss+1.0)/S ) / bir / (x*S);
          BtauImag = make_dd(0.0);
